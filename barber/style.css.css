@@ -1,0 +1,247 @@
+/* Fuente más atractiva */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1f1f, #4b1f4b);
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #111;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: 'Pacifico', cursive;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #f5a623;
+  text-shadow: 2px 2px 5px #000;
+}
+
+header p {
+  color: #ccc;
+  font-size: 1.2em;
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #555;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #f5a623;
+  outline: none;
+}
+
+button {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Botón barbero y logout */
+.barbero-btn,
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.barbero-btn {
+  background-color: #b84d4d;
+  color: #fff;
+}
+.barbero-btn:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.logout {
+  background-color: #444;
+  color: #fff;
+}
+.logout:hover {
+  background-color: #f5a623;
+  color: #111;
+  transform: scale(1.05);
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.calendario button {
+  background-color: #333;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+.calendario button:hover {
+  background-color: #f5a623;
+  color: #111;
+  transform: scale(1.08);
+}
+
+/* Días pasados en gris */
+.calendario button:disabled {
+  background-color: #555;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.horarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.horarios button {
+  background-color: #444;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.activo {
+  background-color: #f5a623 !important;
+  color: #111;
+}
+
+.reservar {
+  display: block;
+  margin: 10px auto 30px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #b84d4d;
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.reservar:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.turno-card {
+  background: linear-gradient(135deg, #222, #4b1f4b);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border-left: 5px solid #f5a623;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.turno-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #333, #5b2f5b);
+}
+
+.borrar-turno {
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 8px;
+}
+.borrar-turno:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.dia-nombre {
+  font-size: 0.7em;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #ccc;
+}
+
+/* Login barbero */
+.barbero-login {
+  text-align: center;
+  margin: 20px 0;
+}
+.barbero-login input {
+  width: 60%;
+}
+.barbero-login button {
+  margin: 10px 5px;
+}
+
+/* Navegación del mes en calendario */
+.mes-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.mes-nav button {
+  background-color: #444;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mes-nav button:hover {
+  background-color: #f5a623;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendario {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  input {
+    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .calendario {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
